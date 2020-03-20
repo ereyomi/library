@@ -1,0 +1,33 @@
+<ion-header class="ion-no-border" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="dark" text="" defaultHref="/tabs/about"></ion-back-button>
+    </ion-buttons>
+    <ion-title>signin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <section class="form-box">
+    <form [formGroup]="signInForm" (ngSubmit)="submitForm()">
+      <ion-item>
+        <ion-label position="floating">Enter username</ion-label>
+        <ion-input formControlName="signInEmail" type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Enter password</ion-label>
+        <ion-input formControlName="signInPassword" type="password"></ion-input>
+      </ion-item>
+
+      <button 
+      class="signin-Btns" 
+      type="submit">signin</button>
+
+      </form>
+
+      <button (click)="presentAlert()">hmm</button>
+  </section>
+  
+  
+  
+</ion-content>

@@ -1,0 +1,60 @@
+.ion-no-border {
+  position: absolute;
+}
+.ion-no-border ion-toolbar {
+  --background: transparent;
+  --ion-color-base: transparent !important;
+}
+.details {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .details-img {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* .details-img:before {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background: linear-gradient(0deg, #000 15%, transparent);
+    transition: 0.5s;
+    z-index: 1;
+  } */
+  
+  .details img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    object-position: top;
+    -o-object-position: top;
+  }
+.details-a{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0px;
+    /* position: absolute;
+    z-index: 10;
+    bottom: 90px;
+
+    left: 0; */
+}  
+ion-list.myionList {
+    background: transparent;
+     border-color: rgb(0, 0, 0, 0); 
+}
+ion-list ion-item {
+  --background: none;
+  --border-color: rgb(0, 0, 0, 0);
+}

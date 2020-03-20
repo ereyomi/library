@@ -1,20 +1,57 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
       Blank
     </ion-title>
   </ion-toolbar>
+</ion-header> -->
+<ion-header class="ion-no-border">
+  <ion-toolbar class="toolbar-padding">
+    <ion-title size="large">Fupre E-Library</ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">E-Library</ion-title>
     </ion-toolbar>
-  </ion-header>
+  </ion-header> -->
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <app-content-loader *ngIf="!moreData" [type]="1"></app-content-loader>
+
+  <ion-card (click)="openDetails(item.id)" *ngFor="let item of dataList">
+    <ion-card-content>
+      <img class="cover" src="{{ localhost }}/{{ item.cover}}" alt="item?.name">
+    </ion-card-content>
+    <ion-card-content>
+      <ion-card-title>{{ item?.name }}</ion-card-title>
+    </ion-card-content>
+    <ion-item> 
+      <ion-label>status:  
+          <ion-chip>
+            <ion-label *ngIf="item?.status === 1">available</ion-label>
+            <ion-label *ngIf="item?.status === 0" color="danger">Not avail</ion-label>
+          </ion-chip>  
+    </ion-label>
+
+      <ion-label>
+        <app-rating [starRating]='item?.rating'></app-rating>    
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+
+  <!-- <ion-list *ngIf="moreData">
+    <ion-item *ngFor="let item of moreData">
+      {{ item.name }}
+    </ion-item>
+  </ion-list> -->
+  <ion-list></ion-list>
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles">
+
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>
+

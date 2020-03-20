@@ -1,0 +1,23 @@
+.form-box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    width: 80%;
+    height: auto;
+}
+.signin-Btns {
+    width: 100%;
+    border: none;
+    background: tomato;
+    color: white;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+.signin-Btns:focus{
+    outline-color: none !important;
+}

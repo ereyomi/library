@@ -1,0 +1,57 @@
+<ion-header class="ion-no-border" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- ion-back-button color="dark" -->
+      <ion-back-button color="dark" text="" defaultHref="/tabs/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="details">
+    <!-- [ngStyle]="{'height': mydynamicHeight ? '100vh' : '400px'}" -->
+  <div class="details-img">
+    <img src="{{ localhost }}/{{ bookData?.cover}}" alt="">
+  </div>
+  
+</div>
+<div class="details-a">
+  <!-- <ion-list lines="none"> to remove border line</ion-list> -->
+  <ion-list class="myionList">
+
+      <ion-item>
+        <h1>{{ bookData?.name }}</h1> 
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          <span>College: </span> 
+          <span *ngIf="bookData?.college === 1">Science</span>
+          <span *ngIf="bookData?.college === 2">Engineering</span>
+        </ion-label> 
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          <span>Status: </span>
+          <ion-chip> 
+            <span *ngIf="bookData?.status === 1">available</span>
+            <span *ngIf="bookData?.status === 0" color="danger">Not available</span> 
+          </ion-chip>
+        </ion-label>
+       
+      </ion-item>
+
+      <ion-item> 
+        <ion-label *ngIf="bookData?.rating">
+          <app-rating [starRating]='bookData?.rating'></app-rating>         
+        </ion-label>
+    </ion-item>
+    
+    
+
+  </ion-list>
+  
+</div>
+</ion-content>

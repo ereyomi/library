@@ -1,0 +1,141 @@
+[
+    {
+      "id": 1,
+      "name": "Analog Circuit Design", 
+      "imageurl": "assets/covers/analog-circuit-design.jpeg",     
+      "details": "",
+      "college": 2,
+      "status": 0,
+      "rating": 2
+    },
+    {
+        "id": 2,
+        "name": "Analog Electronics Application", 
+        "imageurl": "assets/covers/analog-electronics-application.jpeg",     
+        "details": "",
+        "college": 2,
+        "status": 1,
+        "rating": 4
+    },
+    {
+        "id": 3,
+        "name": "Basic Electronics", 
+        "imageurl": "assets/covers/basic-electronics.jpeg",     
+        "details": "",
+        "college": 1,
+        "status": 1,
+        "rating": 5
+    },
+    {
+        "id": 4,
+        "name": "Circuit Electronics", 
+        "imageurl": "assets/covers/circuit-electronics.jpeg",     
+        "details": "",
+        "category": "Action",
+        "college": 1,
+        "status": 1,
+        "rating": 4
+    },
+    {
+        "id": 5,
+        "name": "Design Secret", 
+        "imageurl": "assets/covers/design-secret.jpeg",     
+        "details": "",
+        "college": 2,
+        "status": 1,
+        "rating": 4
+    },
+    {
+        "id": 6,
+        "name": "Digital Electronics", 
+        "imageurl": "assets/covers/digital-electronics.jpeg",     
+        "details": "",
+        "college": 1,
+        "status": 2,
+        "rating": 4
+    },
+    {
+        "id": 7,
+        "name": "Electrical Engineeering Fundamentals", 
+        "imageurl": "assets/covers/electrical-engineeering-fundamentals.jpeg",     
+        "details": "",
+        "college": 2,
+        "status": 1,
+        "rating": 4
+    },
+    {
+        "id": 8,
+        "name": "Electrical Engineering", 
+        "imageurl": "assets/covers/electrical-engineering.jpeg",     
+        "details": "",
+        "college": 2,
+        "status": 1,
+        "rating": 4
+    },
+    {
+        "id": 9,
+        "name": "Electronic Devices", 
+        "imageurl": "assets/covers/electronic-devices.jpeg",     
+        "details": "",
+        "college": 2,
+        "status": 1,
+        "rating": 4
+    },
+    {
+        "id": 10,
+        "name": "Electronics Component And Technology", 
+        "imageurl": "assets/covers/electronics-component-and-technology.jpeg",     
+        "details": "",
+        "college": 2,
+        "status": 1,
+        "rating": 4
+    },
+    {
+        "id": 11,
+        "name": "Electronics Physics", 
+        "imageurl": "assets/covers/engineering-physics.jpeg",     
+        "details": "",
+        "college": 1,
+        "status": 1,
+        "rating": 4
+    },
+    {
+        "id": 12,
+        "name": "Introductory Quantum Physics and Relativity", 
+        "imageurl": "assets/covers/introductory-quantum-physics-and-relativity.jpeg",     
+        "details": "",
+        "college": 1,
+        "status": 1,
+        "rating": 4
+    },
+    {
+        "id": 13,
+        "name": "Practical Electronics", 
+        "imageurl": "assets/covers/practical-electronics.jpeg",     
+        "details": "",
+        "college": 2,
+        "status": 2,
+        "rating": 4
+    },
+    {
+        "id": 14,
+        "name": "Principles Of Electrical Engineering", 
+        "imageurl": "assets/covers/principles-of-electrical-engineering.jpeg",     
+        "details": "",
+        "college": 2,
+        "status": 1,
+        "rating": 4
+    },
+    {
+        "id": 15,
+        "name": "The Energy Of Physics", 
+        "imageurl": "assets/covers/the-energy-of-physics.jpeg",     
+        "details": "",
+        "college": 2,
+        "status": 1,
+        "rating": 4
+    }
+    
+  ]
+      
+  

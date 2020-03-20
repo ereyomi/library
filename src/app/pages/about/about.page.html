@@ -1,0 +1,23 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>about</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+      <ion-card-content>
+        <img [src]="image" alt="">
+        <ion-card-title>{{ name }}</ion-card-title>
+        <ion-card-subtitle>Electrical Electronic Engineering</ion-card-subtitle>
+      </ion-card-content>
+    
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <ion-card-subtitle>Login as a Librarian</ion-card-subtitle>
+        <br>
+          <button id="signin-Btn" (click)="signInPage()">sign in</button>
+      </ion-card-content>
+    </ion-card>
+</ion-content>
