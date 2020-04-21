@@ -1,0 +1,61 @@
+
+#form-box{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+#box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+}
+#box div:first-child {
+    padding: 10px 0px;
+}
+#imgPreview {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    background: rgb(219, 219, 219);
+    padding: 10px 0px;
+}
+input[type="file"]{
+    position: absolute;
+    width: 100% !important;
+    height: 400px;
+    z-index: 7;
+    /* background: red; */ /* ereyomi it covers it 100% */
+    opacity: 0;
+    -moz-opacity: 0;
+    filter: progid:DxImageTransform.Microsoft.Alpha(opacity=0);
+}
+
+#camIcon {
+    position: absolute;
+    z-index: 3;
+    font-size: 4rem;
+}
+#theImager {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    z-index: 2;
+    object-fit: cover;
+    object-position: top;
+    -o-object-position: top;
+}
+/* #post-Btn {
+    width: 100%;
+    padding: 25px 0px;
+    border: none;
+    background: tomato;
+} */

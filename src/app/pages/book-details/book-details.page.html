@@ -2,7 +2,8 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <!-- ion-back-button color="dark" -->
-      <ion-back-button color="dark" text="" defaultHref="/tabs/home"></ion-back-button>
+      <!-- <ion-back-button color="dark" text="" defaultHref="/tabs/home"></ion-back-button> -->
+      <ion-back-button color="dark" text="" defaultHref="{{ backHref }}"></ion-back-button>
     </ion-buttons>
     <ion-title>Details</ion-title>
   </ion-toolbar>
@@ -36,8 +37,7 @@
         <ion-label>
           <span>Status: </span>
           <ion-chip> 
-            <span *ngIf="bookData?.status === 1">available</span>
-            <span *ngIf="bookData?.status === 0" color="danger">Not available</span> 
+            <span [ngClass]="{statusColor: statusNotAvailable}">{{ status[bookData?.status] }}</span>
           </ion-chip>
         </ion-label>
        

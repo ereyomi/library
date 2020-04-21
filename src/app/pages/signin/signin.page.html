@@ -14,18 +14,26 @@
         <ion-label position="floating">Enter username</ion-label>
         <ion-input formControlName="signInEmail" type="email"></ion-input>
       </ion-item>
-      <ion-item>
-        <ion-label position="floating">Enter password</ion-label>
-        <ion-input formControlName="signInPassword" type="password"></ion-input>
+      <ion-item id="groupform">
+          <ion-label position="floating">Enter password</ion-label>
+          <ion-input 
+          formControlName="signInPassword" 
+          [type]=" showPassword ? 'text' : 'password'"></ion-input>
+          <ion-icon 
+          [name]=" showPassword ? 'eye-off' : 'eye'" 
+          slot="end" 
+          id="myicon" 
+          (click)="showPassWord()"></ion-icon>  
+          <!-- <ion-icon name="eye" slot="end"></ion-icon>   -->  
+        
       </ion-item>
+      
 
       <button 
       class="signin-Btns" 
       type="submit">signin</button>
 
       </form>
-
-      <button (click)="presentAlert()">hmm</button>
   </section>
   
   

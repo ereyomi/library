@@ -12,7 +12,7 @@
 
 <ion-content *ngIf="searchResult">
   <ion-list>
-    <ion-item *ngFor="let item of searchResult" lines="none">
+    <ion-item *ngFor="let item of searchResult" lines="none" (click) = "openDetails(item.id)">
       <ion-avatar slot="start">
         <img src="{{ localhost }}/{{ item?.cover}}" alt="">
       </ion-avatar>

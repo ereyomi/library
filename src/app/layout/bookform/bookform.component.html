@@ -1,0 +1,49 @@
+<section id="form-box">
+  <form [formGroup]="bookForm" (ngSubmit)="postBook()">
+   
+    <ion-item lines="full">
+      <ion-label position="floating">Book Name</ion-label>
+      <ion-input formControlName="name" type="text"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Description</ion-label>
+      <ion-textarea formControlName="description" rows="5"></ion-textarea>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label>Select College</ion-label>
+      <!-- <ion-select value="0" okText="Okay" cancleText="Dismiss"></ion-select> -->
+      <ion-select value="" okText="Okay" cancleText="Dismiss" formControlName="college">
+        <ion-select-option value="1">Engineering</ion-select-option>
+        <ion-select-option value="0">Science</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="none">
+      <div id="box">
+        <div>
+          <ion-label>Pick a cover</ion-label>
+        </div>
+        <div id="imgPreview">
+          <input 
+          
+          type="file" 
+          (change)="previewImage($event)" />
+
+            <ion-icon name="camera" id="camIcon" *ngIf="!imagePreview"></ion-icon>
+
+            <img [src]="imagePreview" alt="" id="theImager" *ngIf="imagePreview">
+              
+      </div>
+      </div>
+      
+      
+    </ion-item> 
+    <ion-item>
+      <ion-button 
+    id="post-Btn" 
+    type="submit"
+    expand="block">Post Book</ion-button>
+    </ion-item>
+    
+
+    </form>
+</section>

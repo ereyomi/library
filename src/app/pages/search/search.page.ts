@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from 'src/app/api/book.service';
 import { LibraryapiService } from 'src/app/api/libraryapi.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -11,7 +12,12 @@ export class SearchPage implements OnInit {
   searchResult: any;
   rawApiData: any;
   localhost = 'http://127.0.0.1:8000/img';
-  constructor(private bS: BookService, private api: LibraryapiService) { }
+  backHref = '/tabs/search';
+  constructor(private bS: BookService,
+              private api: LibraryapiService,
+              private router: Router) {
+    this.api.backHref = this.backHref;
+  }
 
   ngOnInit() {
   }
@@ -25,6 +31,10 @@ export class SearchPage implements OnInit {
         console.log(this.searchResult);
       }
     );
+  }
+  openDetails(id: number) {
+    console.log(id);
+    this.router.navigateByUrl(`/details/${id}`);
   }
 
 }

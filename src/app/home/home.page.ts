@@ -18,11 +18,13 @@ export class HomePage implements OnInit {
   currentPage = 1;
   dataList: any;
   localhost = 'http://127.0.0.1:8000/img';
+  backHref = '/tabs/home';
   constructor(
     private router: Router,
     private bS: BookService,
     private api: LibraryapiService) {
       this.dataList = [];
+      this.api.backHref = this.backHref;
     }
 
   ngOnInit() {
@@ -49,8 +51,8 @@ export class HomePage implements OnInit {
     console.log('datalist', this.dataList);
   }
 
-  loadApiData() {
-    this.api.getBooks(++this.currentPage).subscribe(
+  loadApiData(pageNumber = 1) {
+    this.api.getBooks(pageNumber).subscribe(
       data => {
         this.storeApiData(data);
       },
@@ -59,7 +61,7 @@ export class HomePage implements OnInit {
       }
     );
   }
-  loadData(event) {
+  loadMoreData(event) {
     // this.loadApiData(++this.currentPage);
 
     this.api.getBooks(++this.currentPage).subscribe(
@@ -83,5 +85,13 @@ export class HomePage implements OnInit {
   loadMore() {
     console.log('total pages: ', this.totalpages);
     console.log('current page: ', this.currentPage);
+  }
+  async doRefresh(event) {
+    this.dataList = [];
+    await this.loadApiData();
+    console.log('refreshing');
+    setTimeout(() => {
+      event.target.complete();
+    }, 3000);
   }
 }

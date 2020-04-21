@@ -17,7 +17,13 @@
       <ion-title size="large">E-Library</ion-title>
     </ion-toolbar>
   </ion-header> -->
-
+  <ion-refresher slot="fixed"  (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content 
+    pullingIcon="arrow-dropdown"
+    pullingText="Pull to refresh"
+    refreshingSpinner="circles"
+    refreshingText="Refreshin..."></ion-refresher-content>
+  </ion-refresher>
   <app-content-loader *ngIf="!moreData" [type]="1"></app-content-loader>
 
   <ion-card (click)="openDetails(item.id)" *ngFor="let item of dataList">
@@ -41,17 +47,11 @@
     </ion-item>
   </ion-card>
 
-
-  <!-- <ion-list *ngIf="moreData">
-    <ion-item *ngFor="let item of moreData">
-      {{ item.name }}
-    </ion-item>
-  </ion-list> -->
-  <ion-list></ion-list>
-  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+  
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadMoreData($event)">
     <ion-infinite-scroll-content loadingSpinner="bubbles">
-
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>
+
 </ion-content>
 

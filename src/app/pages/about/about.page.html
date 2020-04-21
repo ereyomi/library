@@ -14,10 +14,15 @@
     
     </ion-card>
     <ion-card>
-      <ion-card-content>
+      <ion-card-content *ngIf="!isSignedIn">
         <ion-card-subtitle>Login as a Librarian</ion-card-subtitle>
         <br>
           <button id="signin-Btn" (click)="signInPage()">sign in</button>
+      </ion-card-content>
+      <ion-card-content *ngIf="isSignedIn">
+        <ion-card-subtitle>Hey Librarian {{ username }}</ion-card-subtitle>
+        <br>
+          <button id="signin-Btn" (click)="signOut()">sign out</button>
       </ion-card-content>
     </ion-card>
 </ion-content>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { TabsPage } from './tabs.page';
+import { AuthGuard } from 'src/app/api/auth.guard';
 
 const routes: Routes = [
   {path: '', redirectTo: '/tabs/home', pathMatch: 'full' },
@@ -20,6 +21,11 @@ const routes: Routes = [
       {
         path: 'about',
         loadChildren: () => import('src/app/pages/about/about.module').then( m => m.AboutPageModule)
+      },
+      {
+        path: 'addbook',
+        loadChildren: () => import('src/app/pages/addbook/addbook.module').then( m => m.AddbookPageModule),
+        canActivateChild: [AuthGuard],
       },
     ]
   }
