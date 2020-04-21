@@ -31,7 +31,10 @@
 
       <button 
       class="signin-Btns" 
-      type="submit">signin</button>
+      type="submit" #signinBtn [disabled]="toSubmit">
+        <ion-spinner name="dots" *ngIf="toSubmit"></ion-spinner>
+        <span *ngIf="!toSubmit">signin</span>
+      </button>
 
       </form>
   </section>

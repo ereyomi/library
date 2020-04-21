@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { SigninResolver } from './api/signin-route-resolver';
 
 const routes: Routes = [
   {
@@ -17,7 +18,8 @@ const routes: Routes = [
   },
   {
     path: 'signin',
-    loadChildren: () => import('./pages/signin/signin.module').then( m => m.SigninPageModule)
+    loadChildren: () => import('./pages/signin/signin.module').then( m => m.SigninPageModule),
+    resolve:  {data: SigninResolver},
   },
   {
     path: 'signup',

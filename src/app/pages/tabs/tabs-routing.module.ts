@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { TabsPage } from './tabs.page';
 import { AuthGuard } from 'src/app/api/auth.guard';
+import { SigninResolver } from 'src/app/api/signin-route-resolver';
 
 const routes: Routes = [
   {path: '', redirectTo: '/tabs/home', pathMatch: 'full' },
@@ -20,7 +21,8 @@ const routes: Routes = [
       },
       {
         path: 'about',
-        loadChildren: () => import('src/app/pages/about/about.module').then( m => m.AboutPageModule)
+        loadChildren: () => import('src/app/pages/about/about.module').then( m => m.AboutPageModule),
+        resolve:  {data: SigninResolver},
       },
       {
         path: 'addbook',
