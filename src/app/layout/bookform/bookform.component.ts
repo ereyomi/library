@@ -8,7 +8,7 @@ import { LibraryapiService } from 'src/app/api/libraryapi.service';
   styleUrls: ['./bookform.component.scss'],
 })
 export class BookformComponent implements OnInit {
-  private bookForm: FormGroup;
+  bookForm: FormGroup;
   imagePreview: string | ArrayBuffer;
   cover: any;
   constructor(
